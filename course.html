@@ -3,32 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>StudentHub - Courses</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-        <p1 align="left"><b><u><h1>1.Available Courses</h1></u></b></p1>
-        <ul>
-            <li><h2>Computer Engineering</h2></li>
-            <li>Programming in C</li>
-            <li>Data Structures</li>
-            <li>Java Programming</li>
-            <li>Web Development</li>
-            <li>Database Management</li>
-            <li>Computer Networks</li>
-            <li><h2>Information Technology</h2></li>
-            <li>Python</li>
-            <li>Cloud Computing</li>
-            <li>AI Basics</li>
-            <li><h2>Mechanical Engineering</h2></li>
-            <li>Thermodynamics</li>
-            <li>CAD</li>
-            <li>Manufacturing</li>
-            
-            
-        </ul>
-        <li><a href="home.html">Home</a></li>
+    <header class="site-header">
+        <div class="brand">
+            <div class="logo">🎓</div>
+            <div>
+                <h1>StudentHub</h1>
+                <p class="tagline">Your College Student Portal</p>
+            </div>
+        </div>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Profile</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="timetable.html">Timetable</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="notice.html">Notice</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main class="container">
+        <div class="card">
+            <h2>Available Courses</h2>
+            <div class="grid">
+                <div>
+                    <h3>Computer Engineering</h3>
+                    <ul>
+                        <li>Programming in C</li>
+                        <li>Data Structures</li>
+                        <li>Java Programming</li>
+                        <li>Web Development</li>
+                        <li>Database Management</li>
+                        <li>Computer Networks</li>
+                    </ul>
 
+                    <h3>Information Technology</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Cloud Computing</li>
+                        <li>AI Basics</li>
+                    </ul>
+
+                    <h3>Mechanical Engineering</h3>
+                    <ul>
+                        <li>Thermodynamics</li>
+                        <li>CAD</li>
+                        <li>Manufacturing</li>
+                    </ul>
+                </div>
+
+                <aside class="card">
+                    <h4>Quick Actions</h4>
+                    <a href="register.html" class="btn">Register</a>
+                    <a href="feedback.html" class="btn">Give Feedback</a>
+                </aside>
+            </div>
+        </div>
+
+        <footer class="footer">&copy; 2026 StudentHub</footer>
+    </main>
 </body>
 </html>

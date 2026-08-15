@@ -4,45 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudentHub - Home</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>StudentHub</h1>
-        <p>Your College Student Portal</p>
+    <header class="site-header">
+        <div class="brand">
+            <div class="logo">🎓</div>
+            <div>
+                <h1>StudentHub</h1>
+                <p class="tagline">Your College Student Portal</p>
+            </div>
+        </div>
+
+        <nav class="site-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Profile</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="timetable.html">Timetable</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="notice.html">Notice</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn">Login</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <hr>
-    <nav>
-        <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="course.html">Courses</a></li>
-            <li><a href="attendance.html">Attendance</a></li>
-            <li><a href="result.html">Results</a></li>
-            <li><a href="notice.html">Notice</a></li>
-            <li><a href="event.html">Events</a></li>
-            <li><a href="timetable.html">Timetable</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-   <hr>
+    <div class="container">
 
-    <main>
-        <section>
+    <main class="container">
+        <div class="card">
             <h2>Welcome to StudentHub</h2>
+            <p>StudentHub is an online portal designed to help students access important academic information quickly and easily.</p>
+            <div class="row" style="margin-top:12px">
+                <div class="icon-box">
+                    <div class="icon">📚</div>
+                    <div>
+                        <strong>Courses</strong>
+                        <div class="muted">Explore available programs and subjects</div>
+                    </div>
+                </div>
+                <div class="icon-box">
+                    <div class="icon">📝</div>
+                    <div>
+                        <strong>Results & Attendance</strong>
+                        <div class="muted">View grades and attendance records</div>
+                    </div>
+                </div>
+                <div class="icon-box">
+                    <div class="icon">📣</div>
+                    <div>
+                        <strong>Notices & Events</strong>
+                        <div class="muted">Stay updated with college announcements</div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-            <p>
-                StudentHub is an online portal designed to help students access
-                important academic information quickly and easily.
-            </p>
-            <p>
-                This portal provides access to attendance, results, notices,
-                course details, events, and student profiles in one place.
-            </p>
-        </section>
+        <div class="card">
+            <h3>Quick Links</h3>
+            <div class="row" style="gap:8px;flex-wrap:wrap">
+                <a href="course.html" class="btn">View Courses</a>
+                <a href="timetable.html" class="btn">Timetable</a>
+                <a href="result.html" class="btn">Results</a>
+                <a href="feedback.html" class="btn">Give Feedback</a>
+            </div>
+        </div>
     </main>
-    <hr>
+
+    <footer class="container footer">&copy; 2026 StudentHub — Built for learning</footer>
+</div>
 </body>
 </html>

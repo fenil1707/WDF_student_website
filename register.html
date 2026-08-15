@@ -4,55 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudentHub - Register</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>StudentHub</h1>
-        <p>Student Registration Portal</p>
+    <header class="site-header">
+        <div class="brand">
+            <div class="logo">🎓</div>
+            <div>
+                <h1>StudentHub</h1>
+                <p class="tagline">Student Registration Portal</p>
+            </div>
+        </div>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Profile</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="timetable.html">Timetable</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="notice.html">Notice</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn">Login</a></li>
+            </ul>
+        </nav>
     </header>
-    <hr>
-    <main>
-        <section>
-            <h2>Student Registration</h2>
-            <p>
-                Create your StudentHub account by filling in the details below.
-            </p>
+
+    <main class="container">
+        <div class="card" style="max-width:640px;margin:0 auto">
+            <h2 class="center">Student Registration</h2>
+            <p class="center">Create your StudentHub account by filling in the details below.</p>
+
             <form action="login.html" method="get">
-                <fieldset>
-                    <legend>Registration Details</legend>
-                    <p>
-                        <label for="name">Full Name:</label><br>
-                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                    </p>
-                    <p>
-                        <label for="id">Student ID:</label><br>
-                        <input type="text" id="id" name="id" placeholder="Enter Student ID" required>
-                    </p>
-                    <p>
-                        <label for="email">Email Address:</label><br>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </p>
-                    <p>
-                        <label for="password">Password:</label><br>
-                        <input type="password" id="password" name="password" placeholder="Minimum 8 characters"
-                            minlength="8" required>
-                    </p>
-                    <p>
-                        <label for="confirmPassword">Confirm Password:</label><br>
-                        <input type="password" id="confirmPassword" name="confirmPassword"
-                            placeholder="Re-enter password" minlength="8" required>
-                    </p>
-                    <p>
-                        <input type="submit" value="Register">
-                        <input type="reset" value="Clear">
-                    </p>
-                </fieldset>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="id">Student ID</label>
+                <input type="text" id="id" name="id" placeholder="Enter Student ID" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Minimum 8 characters" minlength="8" required>
+
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter password" minlength="8" required>
+
+                <div style="margin-top:12px;display:flex;gap:8px">
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Clear">
+                </div>
             </form>
-            <p>
-                <a href="login.html">Login Here</a>
-            </p>
-        </section>
+
+            <p class="center" style="margin-top:12px"><a href="login.html">Login Here</a></p>
+        </div>
+
+        <footer class="footer">&copy; 2026 StudentHub</footer>
     </main>
-   <hr>
 </body>
 </html>

@@ -4,70 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weekly Timetable</title>
-    <link rel =" stylesheet " href = "timetable.css">
-
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>
-        <section>
-            <h1>Weekly Timetable</h1>
-            <table border="1">
+    <header class="site-header">
+        <div class="brand">
+            <div class="logo">🎓</div>
+            <div>
+                <h1>StudentHub</h1>
+                <p class="tagline">Your College Student Portal</p>
+            </div>
+        </div>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Profile</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="timetable.html">Timetable</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="notice.html">Notice</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container timetable">
+        <div class="card">
+            <h2>Weekly Timetable</h2>
+            <table>
                 <thead>
                     <tr>
                         <th>Day</th>
                         <th>9:00 - 10:00</th>
                         <th>10:00 - 11:00</th>
                         <th>11:00 - 12:00</th>
-                        <th>12:00 - 1:00<br><small>BREAK</small></th>
+                        <th>12:00 - 1:00 (BREAK)</th>
                         <th>1:00 - 2:00</th>
                         <th>2:00 - 3:00</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Monday</td>
-                        <td>DBMS</td>
-                        <td>OS</td>
-                        <td>WT</td>
-                        <td rowspan="5"><b>BREAK</b></td>
-                        <td>WDF</td>
-                        <td>TOC</td>
-                    </tr>
-                    <tr>
-                        <td>Tuesday</td>
-                        <td>TOC</td>
-                        <td>DSA</td>
-                        <td>ML</td>
-                        <td>WEB3</td>
-                        <td>DBMS</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>OS</td>
-                        <td>ML</td>
-                        <td>WEB3</td>
-                        <td>DSA</td>
-                        <td>CN</td>
-                    </tr>
-                    <tr>
-                        <td>Thursday</td>
-                        <td>CN</td>
-                        <td>DBMS</td>
-                        <td>ML</td>
-                        <td>AI</td>
-                        <td>DSA</td>
-                    </tr>
-                    <tr>
-                        <td>Friday</td>
-                        <td>DSA</td>
-                        <td>DBMS</td>
-                        <td>WT</td>
-                        <td>ML</td>
-                        <td>DSA</td>
-                    </tr>
+                    <tr><td>Monday</td><td>DBMS</td><td>OS</td><td>WT</td><td>—</td><td>WDF</td><td>TOC</td></tr>
+                    <tr><td>Tuesday</td><td>TOC</td><td>DSA</td><td>ML</td><td>—</td><td>WEB3</td><td>DBMS</td></tr>
+                    <tr><td>Wednesday</td><td>OS</td><td>ML</td><td>WEB3</td><td>—</td><td>DSA</td><td>CN</td></tr>
+                    <tr><td>Thursday</td><td>CN</td><td>DBMS</td><td>ML</td><td>—</td><td>AI</td><td>DSA</td></tr>
+                    <tr><td>Friday</td><td>DSA</td><td>DBMS</td><td>WT</td><td>—</td><td>ML</td><td>DSA</td></tr>
                 </tbody>
             </table>
-        </section>
+        </div>
+
+        <footer class="footer">&copy; 2026 StudentHub</footer>
     </main>
 </body>
 </html>

@@ -3,26 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>StudentHub - Contact</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    
- <p1 align="left"><b><u><h1>1.Contact Information</h1></u></b></p1>
-  <pre><h2><b><ul><li>StudentHub Portal</li></ul></b></h2>
-<b><h3>Address:</h3></b>
-      XYZ Engineering College,
-      Surat,
-      Gujarat 
+    <header class="site-header">
+        <div class="brand">
+            <div class="logo">🎓</div>
+            <div>
+                <h1>StudentHub</h1>
+                <p class="tagline">Your College Student Portal</p>
+            </div>
+        </div>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Profile</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="timetable.html">Timetable</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="notice.html">Notice</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<b>Email:</b>info@studenthub.com</pre>
+    <main class="container">
+        <div class="card">
+            <h2>Contact Information</h2>
+            <p><strong>StudentHub Portal</strong></p>
+            <h3>Address</h3>
+            <p>XYZ Engineering College,<br>Surat, Gujarat</p>
+            <p><strong>Email:</strong> info@studenthub.com</p>
 
-<h2><b><ul><li>Contact Form</li></ul></b></h2>
-<pre>
-<ul><li>Name</li>
-<li>Email</li>
-<li>Subject</li>
-<li>Message</li>
-Submit Button</ul></pre>
-<li><a href="home.html">Home</a></li>
+            <h3>Contact Form</h3>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com">
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message"></textarea>
+
+                <div style="margin-top:12px">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+
+        <footer class="footer">&copy; 2026 StudentHub</footer>
+    </main>
 </body>
 </html>

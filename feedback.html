@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StudentHub - Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <div class="logo">🎓</div>
+            <div>
+                <h1>StudentHub</h1>
+                <p class="tagline">Your College Student Portal</p>
+            </div>
+        </div>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Profile</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="timetable.html">Timetable</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="notice.html">Notice</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="card feedback-container">
+            <h2 class="center">Student Feedback</h2>
+            <form>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                    <div>
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter your full name">
+                    </div>
+                    <div>
+                        <label>Enrollment No.</label>
+                        <input type="text" placeholder="e.g. 25CE047">
+                    </div>
+                </div>
+
+                <label>Email</label>
+                <input type="email" placeholder="abc@gmail.com">
+
+                <label>Department</label>
+                <input type="text" placeholder="e.g. CE-CSPIT">
+
+                <label>Semester</label>
+                <select>
+                    <option>Semester 1</option>
+                    <option>Semester 2</option>
+                    <option>Semester 3</option>
+                    <option>Semester 4</option>
+                    <option>Semester 5</option>
+                    <option>Semester 6</option>
+                    <option>Semester 7</option>
+                    <option>Semester 8</option>
+                </select>
+
+                <label>Feedback Type</label>
+                <select>
+                    <option>Suggestion</option>
+                    <option>Complaint</option>
+                    <option>Appreciation</option>
+                </select>
+
+                <label>Rate StudentHub</label>
+                <select>
+                    <option>★★★★★</option>
+                    <option>★★★★☆</option>
+                    <option>★★★☆☆</option>
+                    <option>★★☆☆☆</option>
+                    <option>★☆☆☆☆</option>
+                </select>
+
+                <label>Recommend Website?</label>
+                <div style="display:flex;gap:12px">
+                    <label><input type="radio" name="recommend"> Yes</label>
+                    <label><input type="radio" name="recommend"> No</label>
+                    <label><input type="radio" name="recommend"> Maybe</label>
+                </div>
+
+                <label>Your Feedback</label>
+                <textarea placeholder="Write your thoughts here...."></textarea>
+
+                <div style="margin-top:12px;display:flex;gap:8px">
+                    <button type="submit">Submit Feedback</button>
+                    <button type="reset">Reset</button>
+                    <a href="home.html" class="btn" style="background:transparent;color:var(--primary);padding:8px;align-self:center">Back</a>
+                </div>
+            </form>
+        </div>
+
+        <footer class="footer">&copy; 2026 StudentHub</footer>
+    </main>
+</body>
+</html>

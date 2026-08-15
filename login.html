@@ -5,46 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudentHub - Login</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <h1>StudentHub</h1>
-        <p>Student Login Portal</p>
+    <header class="site-header">
+        <div class="brand">
+            <div class="logo">🎓</div>
+            <div>
+                <h1>StudentHub</h1>
+                <p class="tagline">Student Login Portal</p>
+            </div>
+        </div>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Profile</a></li>
+                <li><a href="course.html">Courses</a></li>
+                <li><a href="timetable.html">Timetable</a></li>
+                <li><a href="result.html">Results</a></li>
+                <li><a href="notice.html">Notice</a></li>
+                <li><a href="event.html">Events</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn">Login</a></li>
+            </ul>
+        </nav>
     </header>
     <script src="login.js"></script>
-    <hr>
-    <main>
-        <section>
-            <h2>Login</h2>
-            <p>Please login using your registered email address.</p>
+    <div class="container">
+    <main class="container">
+        <div class="card" style="max-width:520px;margin:0 auto">
+            <h2 class="center">Student Login</h2>
+            <p class="center">Please login using your registered email address.</p>
+
             <form action="home.html" method="get">
-                <fieldset>
-                    <legend>Student Login</legend>
-                    <label for="email">Email Address:</label><br>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    <br><br>
-                    <label for="password">Password:</label><br>
-                    <input type="password" id="password" name="password" placeholder="Minimum 8 characters"
-                        minlength="8" required>
-                    <br><br>
-                    <input type="checkbox" id="remember">
-                    <label for="remember">Remember Me</label>
-                    <br><br>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Minimum 8 characters" minlength="8" required>
+
+                <label style="display:flex;align-items:center;gap:8px"><input type="checkbox" id="remember"> Remember Me</label>
+
+                <div style="display:flex;gap:8px;margin-top:12px">
                     <input type="submit" value="Login">
                     <input type="reset" value="Clear">
-                </fieldset>
+                </div>
             </form>
-            <br>
-            <a href="#">Forgot Password?</a>
-            <br><br>
-            <p>
-                Don't have an account?
-                <a href="register.html">Register Here</a>
-            </p>
-        </section>
+
+            <p style="margin-top:12px" class="center"><a href="#">Forgot Password?</a></p>
+
+            <p class="center">Don't have an account? <a href="register.html">Register Here</a></p>
+        </div>
+
+        <footer class="footer">&copy; 2026 StudentHub</footer>
     </main>
-    <hr>
+</div>
 </body>
 
 </html>
