@@ -1,50 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudentHub - Notices</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notices | StudentHub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header class="site-header">
-        <div class="brand">
-            <div class="logo">🎓</div>
-            <div>
-                <h1>StudentHub</h1>
-                <p class="tagline">Your College Student Portal</p>
-            </div>
+      <div class="brand">
+        <div class="logo">🎓</div>
+        <div>
+          <h2>StudentHub</h2>
+          <p>Student Portal</p>
         </div>
-        <nav class="site-nav">
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Profile</a></li>
-                <li><a href="course.html">Courses</a></li>
-                <li><a href="timetable.html">Timetable</a></li>
-                <li><a href="result.html">Results</a></li>
-                <li><a href="notice.html">Notice</a></li>
-                <li><a href="event.html">Events</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html" class="btn">Login</a></li>
-            </ul>
-        </nav>
+      </div>
+
+      <nav class="site-nav">
+        <a href="home.html">Home</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="results.html">Results</a>
+        <a href="courses.html">Courses</a>
+        <a href="register.html">Register</a>
+        <a href="notice.html" class="active">Notices</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </header>
 
     <main class="container">
-        <div class="card">
-            <h2>Latest Notices</h2>
-            <ul class="notice-list">
-                <li>Semester Examination starts from 15 December 2026</li>
-                <li>College will remain closed on 25 December</li>
-                <li>Project submission deadline is 30 November</li>
-                <li>Industrial Visit registration is open</li>
-                <li>Sports Week starts next Monday</li>
-            </ul>
+      <section class="card notices-section">
+        <h1>Student Notices</h1>
+        <p>Search and explore college announcements and updates.</p>
+
+        <div class="notice-controls">
+          <input
+            type="search"
+            id="searchNotice"
+            placeholder="Search notices..."
+            aria-label="Search notices"
+          />
+
+          <select id="filterCategory" aria-label="Filter by category">
+            <option value="All">All Categories</option>
+            <option value="Exam">Exam</option>
+            <option value="Event">Event</option>
+            <option value="Academic">Academic</option>
+            <option value="General">General</option>
+          </select>
+
+          <select id="sortDate" aria-label="Sort notices by date">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+          </select>
         </div>
 
-        <footer class="footer">&copy; 2026 StudentHub</footer>
+        <p id="noticeStatus" role="status" aria-live="polite">
+          Loading notices...
+        </p>
+
+        <div id="noticeList" class="notice-list"></div>
+
+        <div class="pagination">
+          <button id="prevPage" type="button" disabled>Previous</button>
+          <span id="pageInfo">Page 1 of 1</span>
+          <button id="nextPage" type="button" disabled>Next</button>
+        </div>
+      </section>
     </main>
-</body>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 StudentHub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

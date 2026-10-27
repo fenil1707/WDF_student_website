@@ -1,68 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudentHub - Register</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration | StudentHub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header class="site-header">
-        <div class="brand">
-            <div class="logo">🎓</div>
-            <div>
-                <h1>StudentHub</h1>
-                <p class="tagline">Student Registration Portal</p>
-            </div>
+      <div class="brand">
+        <div class="logo">🎓</div>
+        <div>
+          <h2>StudentHub</h2>
+          <p>Student Portal</p>
         </div>
-        <nav class="site-nav">
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Profile</a></li>
-                <li><a href="course.html">Courses</a></li>
-                <li><a href="timetable.html">Timetable</a></li>
-                <li><a href="result.html">Results</a></li>
-                <li><a href="notice.html">Notice</a></li>
-                <li><a href="event.html">Events</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="login.html" class="btn">Login</a></li>
-            </ul>
-        </nav>
+      </div>
+
+      <nav class="site-nav">
+        <a href="home.html">Home</a>
+        <a href="timetable.html">Timetable</a>
+        <a href="results.html">Results</a>
+        <a href="courses.html">Courses</a>
+        <a href="register.html" class="active">Register</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </header>
 
     <main class="container">
-        <div class="card" style="max-width:640px;margin:0 auto">
-            <h2 class="center">Student Registration</h2>
-            <p class="center">Create your StudentHub account by filling in the details below.</p>
+      <div class="card registration-card">
+        <h1>Student Registration</h1>
+        <p>Enter your details to complete the registration form.</p>
 
-            <form action="login.html" method="get">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        <!-- CHANGED: Added action and method -->
+        <form
+          id="registrationForm"
+          action="register.php"
+          method="POST"
+          novalidate
+        >
+          <!-- CHANGED: Added hidden field for PHP to know which form was submitted -->
+          <input type="hidden" name="form_type" value="registration" />
 
-                <label for="id">Student ID</label>
-                <input type="text" id="id" name="id" placeholder="Enter Student ID" required>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              required
+            />
+            <small class="error" id="nameError"></small>
+          </div>
 
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="student@example.com"
+              required
+            />
+            <small class="error" id="emailError"></small>
+          </div>
 
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Minimum 8 characters" minlength="8" required>
+          <div class="form-group">
+            <label for="mobile">Mobile Number</label>
+            <input
+              type="tel"
+              id="mobile"
+              name="mobile"
+              placeholder="Enter 10-digit mobile number"
+              inputmode="numeric"
+              maxlength="10"
+              required
+            />
+            <small class="error" id="mobileError"></small>
+          </div>
 
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter password" minlength="8" required>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Create a password"
+              required
+            />
+            <small class="error" id="passwordError"></small>
+          </div>
 
-                <div style="margin-top:12px;display:flex;gap:8px">
-                    <input type="submit" value="Register">
-                    <input type="reset" value="Clear">
-                </div>
-            </form>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="Confirm your password"
+              required
+            />
+            <small class="error" id="confirmPasswordError"></small>
+          </div>
 
-            <p class="center" style="margin-top:12px"><a href="login.html">Login Here</a></p>
-        </div>
+          <div class="form-group">
+            <label for="course">Course</label>
+            <select id="course" name="course" required>
+              <option value="">Select your course</option>
+              <option value="CSE">Computer Science Engineering</option>
+              <option value="CE">Computer Engineering</option>
+              <option value="IT">Information Technology</option>
+              <option value="AIML">
+                Artificial Intelligence and Machine Learning
+              </option>
+              <option value="ECE">
+                Electronics and Communication Engineering
+              </option>
+              <option value="ME">Mechanical Engineering</option>
+            </select>
+            <small class="error" id="courseError"></small>
+          </div>
 
-        <footer class="footer">&copy; 2026 StudentHub</footer>
+          <div class="form-group">
+            <label for="year">Academic Year</label>
+            <select id="year" name="year" required>
+              <option value="">Select your academic year</option>
+              <option value="1">First Year</option>
+              <option value="2">Second Year</option>
+              <option value="3">Third Year</option>
+              <option value="4">Fourth Year</option>
+            </select>
+            <small class="error" id="yearError"></small>
+          </div>
+
+          <fieldset class="form-group gender-group">
+            <legend>Gender</legend>
+            <label
+              ><input type="radio" name="gender" value="Male" /> Male</label
+            >
+            <label
+              ><input type="radio" name="gender" value="Female" /> Female</label
+            >
+            <label
+              ><input type="radio" name="gender" value="Other" /> Other</label
+            >
+            <small class="error" id="genderError"></small>
+          </fieldset>
+
+          <div class="form-group terms-group">
+            <label for="terms">
+              <input type="checkbox" id="terms" name="terms" />
+              I accept the terms and conditions.
+            </label>
+            <small class="error" id="termsError"></small>
+          </div>
+
+          <button type="submit">Register</button>
+          <p id="formMessage" role="status" aria-live="polite"></p>
+        </form>
+      </div>
     </main>
-</body>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 StudentHub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>

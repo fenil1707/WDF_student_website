@@ -69,17 +69,13 @@ input[type=submit]:hover,button:hover{opacity:0.95}
 
 .notice-list li, .event-list li{margin-bottom:8px}
 
-/* small utilities */
 .row{display:flex;gap:12px;align-items:center}
 .center{text-align:center}
 
-/* feedback tweaks */
 .feedback-container{max-width:650px;margin:0 auto}
 
-/* make old timetable look better */
 .timetable table{width:100%;border-collapse:collapse}
 .timetable th,.timetable td{padding:10px;border:1px solid #e6eef5;text-align:center}
 .timetable th{background:#f3f7fb}
 
-/* link focus */
 a:focus{outline:2px solid rgba(42,111,151,0.3);outline-offset:2px}

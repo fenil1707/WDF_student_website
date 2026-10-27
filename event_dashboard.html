@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Events API Dashboard | StudentHub</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">🎓</div>
+        <div>
+          <h1>StudentHub</h1>
+          <p class="tagline">Async Event Dashboard</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="card">
+        <h2>Manage Events (No Reload)</h2>
+
+        <form
+          id="eventForm"
+          style="margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap"
+        >
+          <input type="hidden" id="eventId" />
+          <input type="text" id="eventName" placeholder="Event Name" required />
+          <input type="date" id="eventDate" required />
+          <input type="text" id="eventVenue" placeholder="Venue" required />
+          <button type="submit" id="saveBtn">Save Event</button>
+        </form>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Event Name</th>
+              <th>Date</th>
+              <th>Venue</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="eventTableBody"></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script>
+      function loadEvents() {
+        fetch("api_events.php")
+          .then((response) => response.json())
+          .then((data) => {
+            let tbody = document.getElementById("eventTableBody");
+            tbody.innerHTML = "";
+            data.forEach((event) => {
+              tbody.innerHTML += `
+                        <tr>
+                            <td>${event.id}</td>
+                            <td>${event.event_name}</td>
+                            <td>${event.event_date}</td>
+                            <td>${event.venue}</td>
+                            <td>
+                                <button onclick="editEvent(${event.id}, '${event.event_name}', '${event.event_date}', '${event.venue}')" style="background:#f39c12; border:none; color:white; padding:6px 12px; cursor:pointer; border-radius:4px; margin-right:5px;">Edit</button>
+                                <button onclick="deleteEvent(${event.id})" style="background:#e74c3c; border:none; color:white; padding:6px 12px; cursor:pointer; border-radius:4px;">Delete</button>
+                            </td>
+                        </tr>
+                    `;
+            });
+          });
+      }
+
+      document
+        .getElementById("eventForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          let id = document.getElementById("eventId").value;
+          let name = document.getElementById("eventName").value;
+          let date = document.getElementById("eventDate").value;
+          let venue = document.getElementById("eventVenue").value;
+
+          let method = id ? "PUT" : "POST";
+          let payload = { event_name: name, event_date: date, venue: venue };
+          if (id) payload.id = id;
+
+          fetch("api_events.php", {
+            method: method,
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          }).then(() => {
+            document.getElementById("eventForm").reset();
+            document.getElementById("eventId").value = "";
+            loadEvents();
+          });
+        });
+
+      function editEvent(id, name, date, venue) {
+        document.getElementById("eventId").value = id;
+        document.getElementById("eventName").value = name;
+        document.getElementById("eventDate").value = date;
+        document.getElementById("eventVenue").value = venue;
+      }
+
+      function deleteEvent(id) {
+        if (confirm("Are you sure you want to delete this event?")) {
+          fetch(`api_events.php?id=${id}`, { method: "DELETE" }).then(() =>
+            loadEvents(),
+          );
+        }
+      }
+
+      loadEvents();
+    </script>
+  </body>
+</html>

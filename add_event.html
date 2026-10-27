@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add Event</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="card" style="max-width: 500px; margin: 40px auto">
+        <h2>Add New Event</h2>
+        <form
+          method="POST"
+          action="process_add_event.php"
+          enctype="multipart/form-data"
+        >
+          <label>Event Name</label>
+          <input type="text" name="event_name" required />
+
+          <label>Event Date</label>
+          <input type="date" name="event_date" required />
+
+          <label>Venue</label>
+          <input type="text" name="venue" required />
+
+          <label>Event Poster (JPG/PNG, Max 2MB)</label>
+          <input
+            type="file"
+            name="poster"
+            accept="image/png, image/jpeg"
+            required
+          />
+
+          <div style="margin-top: 15px; display: flex; gap: 10px">
+            <button type="submit">Save Event</button>
+            <a href="manage_events.php" class="btn" style="background: #6c757d"
+              >Back</a
+            >
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

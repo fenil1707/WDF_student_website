@@ -1,0 +1,59 @@
+
+[
+    {
+        "id": 1,
+        "title": "Mid-Semester Examination Schedule",
+        "category": "Exam",
+        "date": "2026-10-20",
+        "description": "The mid-semester examination schedule has been published. Students should check their timetable."
+    },
+    {
+        "id": 2,
+        "title": "Annual Cultural Festival",
+        "category": "Event",
+        "date": "2026-10-18",
+        "description": "Students are invited to participate in the annual cultural festival. Contact the student committee to register."
+    },
+    {
+        "id": 3,
+        "title": "Library Timing Update",
+        "category": "General",
+        "date": "2026-10-15",
+        "description": "The college library will remain open until 8 PM during examination preparation week."
+    },
+    {
+        "id": 4,
+        "title": "Project Submission Deadline",
+        "category": "Academic",
+        "date": "2026-10-12",
+        "description": "Students must submit their project reports to their respective departments."
+    },
+    {
+        "id": 5,
+        "title": "Sports Day Registration",
+        "category": "Event",
+        "date": "2026-10-10",
+        "description": "Registration is open for students who wish to participate in the annual sports day."
+    },
+    {
+        "id": 6,
+        "title": "Holiday Announcement",
+        "category": "General",
+        "date": "2026-10-08",
+        "description": "Students should check the academic calendar for upcoming college holidays."
+    },
+    {
+        "id": 7,
+        "title": "Practical Examination Notice",
+        "category": "Exam",
+        "date": "2026-10-05",
+        "description": "Practical examination dates will be shared by the respective departments."
+    },
+    {
+        "id": 8,
+        "title": "Assignment Submission",
+        "category": "Academic",
+        "date": "2026-10-01",
+        "description": "Students should submit pending assignments through the prescribed college process."
+    }
+]
